@@ -13,7 +13,7 @@ var urlencodedParser = bodyParser.urlencoded({
 });
 
 var cred = 'username:password'; // NOTE: It should be urlencoded
-var port = 80;
+var port = process.env.PORT || 80;
 if (process.argv[2] !== undefined) {
     cred = process.argv[2];
 }
